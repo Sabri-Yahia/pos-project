@@ -9,8 +9,12 @@ export default function App() {
           <Route path="/" element={<LayoutMain />}>
             <Route index element={<h1>Home Page</h1>} />
             <Route path="dashboard" element={<h1>Dashboard Page</h1>} />
-            <Route path="order" element={<h1>Order Page</h1>} />
-            <Route path="invoices" element={<h1>Invoices Page</h1>} />
+            <Route path="food & drinks" element={<h1>food & drinks Page</h1>} />
+            <Route path="messages" element={<h1>messages Page</h1>} />
+            <Route path="bills" element={<h1>bills Page</h1>} />
+            <Route path="settings" element={<h1>settings Page</h1>} />
+            <Route path="notifications" element={<h1>notifications Page</h1>} />
+            <Route path="support" element={<h1>support Page</h1>} />
           </Route>
 
           <Route path="login" element={<h1>Login Page</h1>} />
