@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../assets/logo-.png";
 import { MdDashboard } from "react-icons/md";
 import { TbBurger } from "react-icons/tb";
@@ -10,6 +10,14 @@ import { MdOutlineSupportAgent } from "react-icons/md";
 
 const id = crypto.randomUUID();
 export default function SideMenu() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    sessionStorage.removeItem("token");
+    navigate("/login");
+  };
+
   return (
     <div className="w-[350px] h-dvh bg-creamy border-r border-r-gray-50 flex flex-col">
       <div className="w-full flex justify-center">
@@ -95,6 +103,9 @@ export default function SideMenu() {
             <MdOutlineSupportAgent />
             Support
           </NavLink>
+          <button className="btn btn-error" onClick={handleLogout}>
+            Logout
+          </button>
         </div>
         <div className=" flex flex-col grow justify-center items-center">
           <div className="flex flex-col gap-4 rounded-3xl shadow-sm  w-[250px] p-3 text-center mb-4">
