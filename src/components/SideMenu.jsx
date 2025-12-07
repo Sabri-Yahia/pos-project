@@ -41,10 +41,10 @@ export default function SideMenu() {
               isActive && "bg-yellow"
             }`
           }
-          to="Food & Drinks"
+          to="menu"
         >
           <TbBurger />
-          Food & Drinks
+          Menu
         </NavLink>
         <NavLink
           className={({ isActive }) =>

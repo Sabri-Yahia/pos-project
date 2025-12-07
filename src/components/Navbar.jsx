@@ -1,14 +1,18 @@
 import { FaAngleRight } from "react-icons/fa6";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { FaRegClock } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <div className="flex justify-between items-center">
       <div className="flex items-center gap-8">
-        <button className="h-12 w-12 flex justify-center items-center bg-gray-200 hover:bg-gray-300 transition-all ease-in-out cursor-pointer shadow-sm rounded-2xl text-2xl my-3 ">
+        <Link
+          to={"../"}
+          className="h-12 w-12 flex justify-center items-center bg-gray-200 hover:bg-gray-300 transition-all ease-in-out cursor-pointer shadow-sm rounded-2xl text-2xl my-3 "
+        >
           &larr;
-        </button>
+        </Link>
         <p className="text-grey text-lg">Dashboard</p>
         <p className="flex items-center gap-3">
           <FaAngleRight /> Sales statistics
